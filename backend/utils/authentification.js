@@ -24,7 +24,7 @@ const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     return next();
   }
-  return res.status(401).send('Token "Admin" n\'est pas valide.');
+  return res.status(401).send('Vous n\'avez pas les droits.');
 };
 
 export { isAuth, isAdmin };

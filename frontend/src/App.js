@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './4-css/App.css';
 import axios from 'axios';
-import Auth_Page from './3-pages/Auth_Page';
+import User_Account from './3-pages/User_Account';
+import Navbar from './3-pages/components/Navbar';
 
 function App() {
 
-  const getTest = async () => {
+/*   const getTest = async () => {
     try {
       const { data } = await axios.get('http://localhost:5000/api/auth/gettest',
         {
@@ -19,7 +21,7 @@ function App() {
     } catch (error) {
       console.log(error.response.data)
     }
-  }
+  } */
 
   useEffect(() => {
     return () => {
@@ -27,11 +29,17 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Auth_Page/>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <Navbar/>
+        </header>
+        <div className='App-body'>
+          <Route path='/mon-compte' component={User_Account} />
+        </div>
+
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -4,12 +4,10 @@ const registerValidation = (data) => {
 	const schemaRegister = Joi.object(
 		{
 			name: Joi.string()
-				.min(6)
 				.required()
 				.messages({
 					"string.base": `Merci de saisir un nom valide.`,
 					"string.empty": `Merci de saisir un nom.`,
-					"string.min": `Votre nom doit contenir au moins 6 caractères.`,
 					"any.required": `Merci de saisir un nom.`
 				}),
 			email: Joi.string()

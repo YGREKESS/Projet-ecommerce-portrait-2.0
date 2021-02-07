@@ -12,6 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/Ygrekess/Sale_Gueule.com.git"
   },
+  "bugs": {
+    "url": "https://github.com/Ygrekess/Sale_Gueule.com/issues"
+  },
+  "homepage": "https://github.com/Ygrekess/Sale_Gueule.com#readme",
   "description": "",
   "dependencies": {
     "@babel/cli": "^7.12.10",

@@ -22,7 +22,14 @@ const login = (email, password) => async (dispatch) => {
 		dispatch({ type: 'USER_LOGIN_FAIL', payload: error.response.data });
     }
 }
+
+const logout = () => (dispatch) => {
+  Cookie.remove("userInfos");
+  dispatch({ type: 'USER_LOGOUT' })
+}
+
 export {
 	register,
-	login
+	login,
+	logout
 }

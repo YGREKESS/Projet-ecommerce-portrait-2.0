@@ -4,6 +4,19 @@
 
 .App-header {
   background-color: #282c34;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.App-body{
+  width: 100vw;
+  height: auto;
+  background-color: red;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,7 +25,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .loading-spinner svg{
   color: thistle;
   animation: rotation 1s linear infinite;
@@ -32,3 +44,145 @@
 .success{
   color: rgb(54, 230, 54);
 }
+
+/* Navbar */
+
+.navbar{
+  background-color: #ffff;
+  height: 14rem;
+  width: 100vw;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+}
+.navbar-top{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+}
+.navbar-logo{
+  height: 8rem;
+  width: 33.33%;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_554214.png&f=1&nofb=1');
+  background-position: center;
+  background-size: auto 6rem;
+  background-repeat: no-repeat;
+}
+.navbar-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  width: 33.33%;
+  color: black;
+}
+.navbar-icons svg{
+  cursor: pointer;
+  transition: .5s;
+  margin: 0 .5rem;
+  color: black;
+}
+.navbar-icons svg:hover{
+  transform: scale(1.1);
+}
+.navbar-bottom{
+  height: 3rem;
+  width: 100%;
+}
+.navbar-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.navbar-links li{
+  list-style-type: none;
+  margin: 0 .5rem;
+}
+.navbar-links li a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+.navbar-links li:hover a {
+  text-decoration: underline;
+}
+
+/* Auth modal */
+.Overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(109, 112, 117, .8);
+}
+.Modal {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  margin: auto;
+  z-index: 1000;
+  height: 60vh;
+  min-height: 600px;
+  width: 40vw;
+  background-color: #ffff;
+  display: flex;
+  justify-content: space-between;
+  outline: none;
+  border-radius: 10px;
+}
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+.modal-close-btn{
+  height: 10%;
+  width: 100%;
+}
+.modal-close-btn svg{
+  float: right;
+  cursor: pointer;
+  transition: .5s;
+}
+.modal-close-btn svg:hover{
+  transform: scale(1.1);
+}
+.modal-signin-form, .modal-register-form{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal-signin-form p span, .modal-register-form p span{
+  color: blue;
+  cursor: pointer;
+  transition: .5s;
+}
+.modal-signin-form p span:hover, .modal-register-form p span:hover{
+  color: rgb(12, 12, 133);
+  cursor: pointer;
+}
+/* .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+} */

@@ -3,8 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../2-actions/userActions';
 import LoadingSpinner from './LoadingSpinner';
 import MessageBox from './MessageBox';
+import GoogleLogin from 'react-google-login';
+import '../../4-css/Auth_Forms.css';
 
 export default function SigninForm() {
+
+	const responseGoogle = (response) => {
+		dispatch(login(response.profileObj.email, response.profileObj.googleId));
+	}
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -33,25 +39,35 @@ export default function SigninForm() {
 	}, [error])
 
 	return (
-		<div>
 			<form className='form signin' onSubmit={submitHandler}>
 				<h2>Connexion</h2>
 				<div>
 					<input placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
 				</div>
 				<div>
-					<input placeholder='Mot de passe' value={password} onChange={(e) => setPassword(e.target.value)}/>
+					<input type='password' placeholder='Mot de passe' value={password} onChange={(e) => setPassword(e.target.value)}/>
 				</div>
-				<div className='validate-btn'>
+				<div className='form-submit'>
 					{
 						loading ? 
 							<LoadingSpinner />
 						:
 							<div>
-								<button>Valider</button>
+								<button className='validate-btn'>Valider</button>
+								<GoogleLogin
+									clientId="451793171695-lgnd29tc2sn8fav97nmhfnv7b1uan259.apps.googleusercontent.com"
+									buttonText=""
+									render={renderProps => (
+										<button className='google-auth-button' onClick={renderProps.onClick} disabled={renderProps.disabled}/>
+									)}
+									onSuccess={responseGoogle}
+									onFailure={responseGoogle}
+									cookiePolicy={'single_host_origin'}
+								/>
 							</div>
 					}
 				</div>
+
 				<div className='message-container'>
 				{
 					signinError &&
@@ -63,6 +79,5 @@ export default function SigninForm() {
 				}
 				</div>
 			</form>
-		</div>
 	)
 }
