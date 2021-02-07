@@ -4,6 +4,7 @@ import './4-css/App.css';
 import axios from 'axios';
 import User_Account from './3-pages/User_Account';
 import Navbar from './3-pages/components/Navbar';
+import Home from './3-pages/Home';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <Navbar/>
         </header>
         <div className='App-body'>
+          <Route path='/' exact component={Home} />
           <Route path='/mon-compte' component={User_Account} />
         </div>
 

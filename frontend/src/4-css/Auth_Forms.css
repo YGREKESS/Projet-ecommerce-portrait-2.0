@@ -20,12 +20,13 @@
 .validate-btn {
 	appearance: none;
 	border: none;
-	padding: .5rem;
+	height: 2rem;
+	width: 6rem;
 	background-color: black;
 	color: #ffff;
 	cursor: pointer;
+	font-size: 20px;
 	transition: .5s;
-	text-transform: uppercase;
 	margin: 1rem auto;
 }
 .validate-btn:hover {
@@ -52,6 +53,7 @@
 	transform: scale(1.1);
 }
 .message-container{
+	text-align: center;
 	height: 4rem;
 }
 .btn-signin{

@@ -1,28 +1,25 @@
 .App {
   text-align: center;
+  font-family: 'Barlow', sans-serif;
 }
 
 .App-header {
   background-color: #282c34;
-  height: 14rem;
+  height: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .App-body{
   width: 100vw;
   height: auto;
-  background-color: red;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
   color: white;
 }
 .loading-spinner svg{
@@ -49,14 +46,16 @@
 
 .navbar{
   background-color: #ffff;
-  height: 14rem;
+  height: 12rem;
   width: 100vw;
   position: fixed;
   z-index: 999;
   top: 0;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .navbar-top{
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   width: 100%;
   height: auto;
@@ -64,10 +63,20 @@
 .navbar-logo{
   height: 8rem;
   width: 33.33%;
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_554214.png&f=1&nofb=1');
-  background-position: center;
-  background-size: auto 6rem;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-logo a{
+  height: 90%;
+  width: auto;
+}
+.navbar-logo a img{
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
+  cursor: pointer;
 }
 .navbar-icons{
   display: flex;
@@ -127,9 +136,9 @@
   bottom: 0;
   margin: auto;
   z-index: 1000;
-  height: 60vh;
-  min-height: 600px;
-  width: 40vw;
+  height: 550px;
+  min-height: 550px;
+  width: 30vw;
   background-color: #ffff;
   display: flex;
   justify-content: space-between;

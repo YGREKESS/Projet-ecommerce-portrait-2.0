@@ -1,0 +1,242 @@
+.user-account-page{
+	height: auto;
+	width: 100vw;
+}
+/* User account menu */
+.user-account-menu{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	padding: 0;
+	height: 5rem;
+}
+.user-account-menu li{
+	width: 15rem;
+	list-style-type: none;
+	border-left: 1px solid black;
+	text-align: center;
+}
+.user-account-menu li:nth-child(3){
+	border-right: 1px solid black;
+}
+.user-account-menu li a{
+	text-decoration: none;	
+	font-size: 15px;
+	color: black;
+}
+.user-account-menu li a.active{
+	text-decoration: underline;
+}
+.user-account-menu li a:hover{
+	text-decoration: underline;
+}
+
+/* User infos */
+.user-infos-component, .user-shipping-component, .user-orders-component, .user-order-details-component{
+	height: auto;
+	width: 100vw;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 2rem auto;
+}
+.user-infos-component form, .user-shipping-component form{
+	height: auto;
+	width: 70vw;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.user-infos-component form div, .user-shipping-component form div{
+	display: flex;
+	flex-direction: column;
+	margin: 2rem;
+	width: 60%;
+}
+.user-infos-component label, .user-shipping-component label{
+	text-align: left;
+}
+.user-infos-component input, .user-shipping-component input{
+	height: 3rem;
+	width: auto;
+	margin-top: .5rem;
+}
+.form-update-password{
+	background-color: rgba(225, 230, 230, 0.445);
+}
+.form-button-update-password, .form-button-user-infos, .form-button-user-shipping{
+	width: 100%;
+}
+.form-button-update-password button, .form-button-user-infos button, .form-button-user-shipping button{
+	width: 100%;
+	height: 3rem;
+	background-color: #DB4A30;
+	font-size: 20px;
+	color: #ffff;
+	border: none;
+	cursor: pointer;
+	transition: .5s;
+}
+.form-button-update-password button:hover, .form-button-user-infos button:hover, .form-button-user-shipping button:hover{
+	transform: scale(1.02);
+	background-color: #e73e21;
+}
+
+/* Order card */
+.order-card{
+	height: auto;
+	width: 25rem;
+	margin: 0 0 5rem 0;
+	font-size: 20px;
+}
+.order-card-image{
+	height: auto;
+	width: 18rem;
+	margin: 1rem auto;
+}
+.order-card-image a{
+	display: block;
+	height: auto;
+	width: 100%;
+}
+.order-card-image a img{
+	height: auto;
+	width: 100%;
+	object-fit: contain;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	transition: .5s;
+}
+.order-card-image a img:hover{
+	transform: scale(1.02);
+}
+.order-card-body{
+	color: black;
+	width: 18rem;
+	margin: auto;
+	text-align: left;
+	display: flex;
+}
+.order-card-body h2{
+	font-size: 20px;
+	margin: 0;
+}
+.order-card-title{
+	width: 70%;
+	max-width: 70%;
+	white-space: normal;
+}
+.order-card-title h2{
+	text-transform: capitalize;
+}
+.order-card-title h2 a{
+	text-decoration: none;
+	color: black;
+}
+.order-card-price{
+	width: 30%;
+	max-width: 30%;
+}
+.order-card-price h2{
+	text-align: right;
+}
+.order-card-footer {
+	width: 18rem;
+	margin: auto;
+}
+.order-card-footer p{
+	font-size: 15px;
+	font-weight: 200;
+	text-align: left;
+}
+
+/* Order details */
+.user-order-item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	border-bottom: 1px solid rgba(189, 185, 185, 0.507);
+}
+.order-details-image{
+	height: auto;
+	width: 40%;
+	margin: 2rem auto;
+	display: flex;
+	justify-content: flex-end;
+}
+.order-details-image img{
+	height: auto;
+	width: 18rem;
+	object-fit: contain;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	transition: .5s;
+}
+.order-details-product{
+	height: auto;
+	width: 40%;
+	margin: 2rem auto;
+}
+.order-details-product p{
+	font-size: 20px;
+	text-align: left;
+}
+.order-details-product p span{
+	font-weight: 200;
+}
+.user-order-address{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	border-bottom: 1px solid rgba(189, 185, 185, 0.507);	
+}
+.shipping-address, .billing-address{
+	height: auto;
+	width: 40%;
+	margin: 2rem auto 2rem 0;
+	text-align: left;
+}
+.shipping-address p, .billing-address p{
+	font-size: 20px;
+}
+.shipping-address p span, .billing-address p span{
+	font-weight: 200;
+}
+.user-order-resume{
+	margin: 2rem auto;
+	width: 60%;
+	text-align: left;
+}
+.user-order-resume p{
+	font-size: 20px;
+}
+.user-order-resume p span{
+	font-weight: 200;
+}
+.user-order-resume p:nth-child(8), .user-order-resume p:nth-child(8) span{
+	font-size: 25px;
+	font-weight: 600;
+	margin: .5rem auto;
+}
+.user-order-download-billing{
+	width: 60%;
+}
+.user-order-download-billing button{
+	width: 100%;
+	height: 3rem;
+	background-color: #DB4A30;
+	font-size: 20px;
+	color: #ffff;
+	border: none;
+	cursor: pointer;
+	transition: .5s;
+}
+.user-order-download-billing button:hover{
+	transform: scale(1.02);
+	background-color: #e73e21;
+}

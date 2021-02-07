@@ -69,12 +69,16 @@ export default function Navbar(props) {
 				</ReactModal>
 			}
 			<div className='navbar-top'>
-				<Link to='/' className='navbar-logo'></Link>
+				<div className='navbar-logo'>
+					<Link to='/'>
+						<img alt='' src='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_554214.png&f=1&nofb=1'></img>
+					</Link>
+				</div>
 				<div className='navbar-icons'>
 					<Link to={'#'} className='cart-icon'>
 						<BiShoppingBag size={30}/>
 					</Link>
-					<Link to={userInfos ? '/mon-compte' : '#'} className='account-icon'>
+					<Link to={userInfos ? '/mon-compte/infos' : '#'} className='account-icon'>
 						<HiOutlineUser size={30} onClick={userInfos ? null : () => modalAuthHandler()}/>
 					</Link>
 					{
