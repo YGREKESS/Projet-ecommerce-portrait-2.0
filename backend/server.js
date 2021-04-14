@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 dotenv.config();
-
+/* test */
 const app = express();
 
 //Connect to DB
