@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../2-actions/userActions';
-import LoadingSpinner from './LoadingSpinner';
-import MessageBox from './MessageBox';
+import MessageBox from '../components/MessageBox';
+import LoadingSpinner from '../components/LoadingSpinner';
 import GoogleLogin from 'react-google-login';
 import '../../4-css/Auth_Forms.css';
 
@@ -36,7 +36,7 @@ export default function SigninForm() {
 		}
 		return () => {
 		}
-	}, [error])
+	}, [error, success])
 
 	return (
 			<form className='form signin' onSubmit={submitHandler}>
@@ -71,11 +71,11 @@ export default function SigninForm() {
 				<div className='message-container'>
 				{
 					signinError &&
-					<MessageBox style='danger' message={signinError}/>
+					<MessageBox type='danger' message={signinError}/>
 				}
 				{
 					success &&
-					<MessageBox style='success' message='Vous êtes connecté.'/>
+					<MessageBox type='success' message='Vous êtes connecté.'/>
 				}
 				</div>
 			</form>

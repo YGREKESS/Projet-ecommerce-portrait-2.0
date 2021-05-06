@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 .App-header {
@@ -12,17 +12,16 @@
   justify-content: center;
   color: white;
 }
-.App-body{
+.App-body {
   width: 100vw;
   height: auto;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color: white;
 }
-.loading-spinner svg{
+.loading-spinner svg {
   color: thistle;
   animation: rotation 1s linear infinite;
 }
@@ -35,50 +34,54 @@
   }
 }
 
-.danger{
+.danger {
   color: rgb(245, 50, 50);
 }
-.success{
+.success {
   color: rgb(54, 230, 54);
 }
 
 /* Navbar */
 
-.navbar{
+.navbar {
   background-color: #ffff;
   height: 12rem;
   width: 100vw;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 999;
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-.navbar-top{
+.navbar-top {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
   height: auto;
 }
-.navbar-logo{
+.navbar-logo {
   height: 8rem;
   width: 33.33%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.navbar-logo a{
+.navbar-logo a {
   height: 90%;
   width: auto;
 }
-.navbar-logo a img{
+.navbar-logo a img {
   height: 100%;
   width: auto;
   object-fit: contain;
   object-position: center;
   cursor: pointer;
 }
-.navbar-icons{
+.navbar-icons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,30 +89,30 @@
   width: 33.33%;
   color: black;
 }
-.navbar-icons svg{
+.navbar-icons svg {
   cursor: pointer;
-  transition: .5s;
-  margin: 0 .5rem;
+  transition: 0.5s;
+  margin: 0 0.5rem;
   color: black;
 }
-.navbar-icons svg:hover{
+.navbar-icons svg:hover {
   transform: scale(1.1);
 }
-.navbar-bottom{
+.navbar-bottom {
   height: 3rem;
   width: 100%;
 }
-.navbar-links{
+.navbar-links {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
 }
-.navbar-links li{
+.navbar-links li {
   list-style-type: none;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
-.navbar-links li a{
+.navbar-links li a {
   text-decoration: none;
   color: black;
   font-size: 15px;
@@ -126,7 +129,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(109, 112, 117, .8);
+  background-color: rgba(109, 112, 117, 0.8);
 }
 .Modal {
   position: absolute;
@@ -145,7 +148,7 @@
   outline: none;
   border-radius: 10px;
 }
-.modal-content{
+.modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,19 +157,20 @@
   height: auto;
   padding: 1rem;
 }
-.modal-close-btn{
+.modal-close-btn {
   height: 10%;
   width: 100%;
 }
-.modal-close-btn svg{
+.modal-close-btn svg {
   float: right;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
-.modal-close-btn svg:hover{
+.modal-close-btn svg:hover {
   transform: scale(1.1);
 }
-.modal-signin-form, .modal-register-form{
+.modal-signin-form,
+.modal-register-form {
   width: 100%;
   height: 90%;
   display: flex;
@@ -174,12 +178,14 @@
   align-items: center;
   justify-content: center;
 }
-.modal-signin-form p span, .modal-register-form p span{
+.modal-signin-form p span,
+.modal-register-form p span {
   color: blue;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
-.modal-signin-form p span:hover, .modal-register-form p span:hover{
+.modal-signin-form p span:hover,
+.modal-register-form p span:hover {
   color: rgb(12, 12, 133);
   cursor: pointer;
 }
@@ -195,3 +201,13 @@
 .ReactModal__Overlay--before-close{
     opacity: 0;
 } */
+
+@media only screen and (max-width: 600px) {
+  .navbar-top {
+    justify-content: flex-start;
+  }
+  .navbar-logo,
+  .navbar-icons {
+    height: 5rem;
+  }
+}

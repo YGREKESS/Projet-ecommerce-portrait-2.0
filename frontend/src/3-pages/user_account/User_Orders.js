@@ -1,5 +1,5 @@
 import React from 'react'
-import OrderCard from './OrderCard'
+import OrderCard from '../components/OrderCard'
 
 export default function User_Orders() {
 

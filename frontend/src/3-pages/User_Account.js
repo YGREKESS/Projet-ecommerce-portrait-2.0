@@ -1,13 +1,13 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux';
-import UserAccountMenu from './components/UserAccountMenu';
+import UserAccountMenu from './user_account/UserAccountMenu';
 import '../4-css/User_Account.css'
 import { Route } from 'react-router-dom';
-import User_Infos from './components/User_Infos';
-import User_Shipping from './components/User_Shipping';
-import User_Orders from './components/User_Orders';
-import User_OrderDetails from './components/User_OrderDetails';
+import User_Infos from './user_account/User_Infos';
+import User_Shipping from './user_account/User_Shipping';
+import User_Orders from './user_account/User_Orders';
+import User_OrderDetails from './user_account/User_OrderDetails';
 
 export default function User_Account(props) {
 

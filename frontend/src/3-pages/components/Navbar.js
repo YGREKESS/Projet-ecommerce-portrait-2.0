@@ -5,11 +5,11 @@ import { FiLogOut } from 'react-icons/fi';
 import { GrInstagram } from 'react-icons/gr';
 import { IoClose } from 'react-icons/io5'
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { logout } from '../../2-actions/userActions';
 import ReactModal from 'react-modal';
-import RegisterForm from './RegisterForm';
-import SigninForm from './SigninForm';
+import RegisterForm from '../auth/RegisterForm';
+import SigninForm from '../auth/SigninForm';
 
 export default function Navbar(props) {
 
@@ -91,7 +91,7 @@ export default function Navbar(props) {
 			</div>
 			<div className='navbar-bottom'>
 				<ul className='navbar-links'>
-					<li><Link to='#'>Boutique</Link></li>
+					<li><NavLink activeStyle={{textDecoration: "underline"}} to='/boutique'>Boutique</NavLink></li>
 					<li><Link to='#'>Blog</Link></li>
 					<li><Link to='#'>Contact</Link></li>
 					<li><Link to='#'><GrInstagram size={25}/></Link></li>

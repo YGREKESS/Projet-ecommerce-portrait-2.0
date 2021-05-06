@@ -6,9 +6,12 @@ export default function User_Shipping() {
 
     const { register, handleSubmit, errors } = useForm();
 
+	const onSubmit = (data) => {
+		console.log(data);
+	}
 	return (
 		<div className='user-shipping-component'>
-			<form id='form-user-shipping'>
+			<form id='form-user-shipping' onSubmit={handleSubmit(onSubmit)}>
 				<div>
 					<label htmlFor='' className=''>Adresse</label>
 					<input

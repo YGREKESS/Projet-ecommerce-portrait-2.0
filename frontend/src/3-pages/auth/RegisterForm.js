@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { register } from '../../2-actions/userActions';
 import { useDispatch, useSelector } from 'react-redux';
-import MessageBox from './MessageBox';
-import LoadingSpinner from './LoadingSpinner';
+import MessageBox from '../components/MessageBox';
+import LoadingSpinner from '../components/LoadingSpinner';
 import GoogleLogin from 'react-google-login';
 import '../../4-css/Auth_Forms.css';
 
@@ -76,11 +76,11 @@ export default function RegisterForm({ props }) {
 				<div className='message-container'>
 				{
 					registerError &&
-					<MessageBox style='danger' message={registerError}/>
+					<MessageBox type='danger' message={registerError}/>
 				}
 				{
 					success &&
-					<MessageBox style='success' message='Votre compte a été créé.'/>
+					<MessageBox type='success' message='Votre compte a été créé.'/>
 				}
 				</div>
 			</form>
